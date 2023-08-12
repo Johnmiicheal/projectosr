@@ -7,6 +7,7 @@ import {
   Box,
   Link,
   Button,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { ScrollerMotion } from "scroller-motion";
 import { initialBlobityOptions } from "../blob.config";
@@ -18,6 +19,7 @@ import Header from "@/components/Header";
 import { PiArrowCircleUpRightThin } from "react-icons/pi";
 import VideoSection from "@/components/VideoSection";
 import Marquee from "react-fast-marquee";
+import Footer from "@/components/Footer";
 
 const Home: React.FC = () => {
   const blobityInstance = useBlobity(initialBlobityOptions);
@@ -29,9 +31,57 @@ const Home: React.FC = () => {
     }
   }, [blobityInstance]);
   const images = ["/1.png", "/2.png", "/3.png", "/4.png", "/5.png"];
+  const members = [
+    {
+      img: "/members/marcella.png",
+      name: "Marcella Imoisimi",
+      pos: "SWE @ Ebay",
+    },
+    { img: "/members/oju.png", name: "Ojxu Junaid", pos: "UX @ Google" },
+    {
+      img: "/members/malcolm.png",
+      name: "Malcolm Akinie",
+      pos: "SWE II @ Slack",
+    },
+    {
+      img: "/members/tayfacen.png",
+      name: "Taylor Facen",
+      pos: "Product @ AngelList",
+    },
+    {
+      img: "/members/aminat.png",
+      name: "Aminat Iriafen",
+      pos: "Research @ Quantilope",
+    },
+    {
+      img: "/members/eni.png",
+      name: "Eni Asebiomo",
+      pos: "Design @ Percapita",
+    },
+    {
+      img: "/members/rahma.png",
+      name: "Rahmana Muhammad",
+      pos: "SWE @ Mastercard",
+    },
+    {
+      img: "/members/johnathan.png",
+      name: "Jonathan Anderson",
+      pos: "SWE @ Vise",
+    },
+  ];
+  const sponsors = [
+    "/sponsors/bain-capital-logo.png",
+    "/sponsors/brex.png",
+    "/sponsors/contrary.png",
+    "/sponsors/jpm.png",
+    "/sponsors/mhackweek.png",
+    "/sponsors/primitives.png",
+    "/sponsors/slingshot.png",
+    "/sponsors/svb.png",
+  ];
   return (
     <ScrollerMotion>
-      <Flex direction="column" bg="black" minH="100dvh" pb={20}>
+      <Flex direction="column" bg="black" minH="100dvh">
         <Header />
         <motion.div
           initial={{ opacity: 0 }}
@@ -187,15 +237,71 @@ const Home: React.FC = () => {
           </Marquee>
 
           <Flex p="64px" mt={20} bg="white" direction="column" align="center">
-           <Text
+            <Text
               textAlign="center"
               fontWeight={500}
               fontSize={18}
               color="#111111"
+              mb={10}
             >
               PREVIOUS SPONSORS
             </Text>
+            <Flex gap={10} overflow="hidden">
+              {sponsors.map((logo) => (
+                <Image src={logo} alt="sponsor logo" />
+              ))}
+            </Flex>
           </Flex>
+
+          <Flex
+            p="64px"
+            mt={18}
+            direction="column"
+            align="center"
+            color="#F9FAFB"
+          >
+            <Text
+              textAlign="center"
+              fontWeight={700}
+              fontSize={60}
+              textTransform="capitalize"
+            >
+              Our Members
+            </Text>
+            <Text textAlign="center" fontWeight={500} fontSize={28}>
+              They are building the next generation of technology & finance
+              companies
+            </Text>
+
+            <Flex overflow="hidden" mt={28}>
+              <SimpleGrid columns={4} spacing={10}>
+                {members.map((member) => (
+                  <Flex direction="column" key={member.img}>
+                    <Image
+                      src={member.img}
+                      alt="members pictures"
+                      fit="cover"
+                      h="full"
+                      mb={7}
+                      borderRadius="full"
+                      border="4px solid #F9FAFB"
+                    />
+                    <Text textAlign="center" fontWeight={700} fontSize={24} textTransform="capitalize">
+                      {member.name}
+                    </Text>
+                    <Text textAlign="center" fontWeight={400} fontSize={16} textTransform="capitalize" mb={10}>{member.pos}</Text>
+                  </Flex>
+                ))}
+              </SimpleGrid>
+            </Flex>
+            <Text textAlign="center" fontWeight={700} fontSize={32} textTransform="capitalize" color="#F9FAFB" mt={24} mb={14}> 
+            They are founders, operators, investors, & alumni at institutions like
+            </Text>
+            <Image src="/Framer.png" alt="many many logo" w="full" />
+          </Flex>
+
+
+<Footer />
         </motion.div>
       </Flex>
     </ScrollerMotion>
