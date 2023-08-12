@@ -2,6 +2,11 @@ import { Flex, Text, Button, Link, Divider, SimpleGrid, Box} from "@chakra-ui/re
 import { useRouter } from "next/router";
 
 const Footer = () => {
+    const links = [
+        {path: "/terms", text: "Terms",},
+        {path: "/privacy", text: "Privacy",},
+        {path: "/cookies", text: "Cookies",}
+    ]
     return(
         <Flex bg="white" p="64px" w="full" direction="column">
             <Flex mt={32} justify="space-between">
@@ -52,9 +57,20 @@ const Footer = () => {
                     </Text>
                 
                     </SimpleGrid>
-
                 </Flex>
-
+            </Flex>
+            <Divider mt={14} />
+            <Flex justify="space-between" mt={14}>
+                <Text>
+                Kinfolq@2023 - All rights reserved.
+                </Text>
+                <Flex gap ={10}>
+                    {links.map((link) => (
+                        <Link href={link.path} key={link.path} color="black" _hover={{ color: "gray.600" }}>
+                            {link.text}
+                        </Link>
+                    ))}
+                </Flex>
             </Flex>
         </Flex>
     )
