@@ -22,6 +22,7 @@ import Marquee from "react-fast-marquee";
 import Footer from "@/components/Footer";
 
 const Home: React.FC = () => {
+  const router = useRouter();
   const blobityInstance = useBlobity(initialBlobityOptions);
 
   React.useEffect(() => {
@@ -158,7 +159,7 @@ const Home: React.FC = () => {
               </Text>
             </Flex>
             <Flex>
-              <Icon as={PiArrowCircleUpRightThin} fontSize="128" data-blobity />
+              <Icon as={PiArrowCircleUpRightThin} fontSize="128" data-blobity onClick={() => router.push('/tickets')} />
             </Flex>
           </Flex>
 
@@ -172,7 +173,7 @@ const Home: React.FC = () => {
             >
               Our Agenda
             </Text>
-            <Icon as={PiArrowCircleUpRightThin} fontSize="128" data-blobity />
+            <Icon as={PiArrowCircleUpRightThin} fontSize="128" data-blobity onClick={() => router.push('/agenda')} />
           </Flex>
           <Flex
             p="64px"
@@ -195,7 +196,7 @@ const Home: React.FC = () => {
               </Text>
             </Flex>
             <Flex>
-              <Icon as={PiArrowCircleUpRightThin} fontSize="128" data-blobity />
+              <Icon as={PiArrowCircleUpRightThin} fontSize="128" data-blobity onClick={() => router.push('/sponsor')} />
             </Flex>
           </Flex>
           <Flex
