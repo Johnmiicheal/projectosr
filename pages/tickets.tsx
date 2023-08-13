@@ -16,9 +16,11 @@ import {
   TabPanel,
   Button,
   Box,
+  Icon,
 } from "@chakra-ui/react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { PiArrowCircleUpRightThin } from "react-icons/pi";
 
 const Tickets = () => {
   const tabStyle = {
@@ -64,16 +66,16 @@ const Tickets = () => {
             position={"relative"}
             zIndex={3}
           >
-            Agenda
+            Get A Ticket
           </Text>
         </Box>
 
         <Flex
           p="64px"
+          direction="column"
           color="white"
           justify="space-between"
-          align="center"
-          gap={40}
+          gap={5}
         >
           <Text
             textAlign="start"
@@ -81,9 +83,8 @@ const Tickets = () => {
             fontSize={60}
             textTransform="capitalize"
             lineHeight="shorter"
-            w="4em"
           >
-            Our Agenda
+            Our sponsorship tiers for this conference are:
           </Text>
 
           <Text
@@ -91,7 +92,6 @@ const Tickets = () => {
             fontWeight={500}
             fontSize={28}
             color="#F9FAFB"
-            w="790px"
           >
             They are building the next generation of technology companies and
             wield enormous levels of influence and buying power due to their
@@ -99,151 +99,92 @@ const Tickets = () => {
           </Text>
         </Flex>
         <Flex direction="column" mb="10" justify="center" w="full" px="64px">
-          <Tabs variant="unstyled" isFitted w="full">
-            <TabList bg="black" w="full" p={4} borderRadius="4" color="white">
-              <Tab _selected={{ ...tabStyle }} _hover={{ ...tabHover }}>
-                Day 1 ,Friday, September 15th
-              </Tab>
-              <Tab _selected={{ ...tabStyle }} _hover={{ ...tabHover }}>
-                Day 1 ,Friday, September 15th
-              </Tab>
-              <Tab _selected={{ ...tabStyle }} _hover={{ ...tabHover }}>
-                Day 1 ,Friday, September 15th
-              </Tab>
-            </TabList>
-            <TabPanels>
-              <TabPanel mt={10}>
-                <TableContainer borderRadius="20px" border="1px solid #FFFFFF">
-                  <Table variant="simple" color="white">
-                    <Thead>
-                      <Tr>
-                        <Th color="white" fontSize={24} fontWeight={700}>
-                          TIME
-                        </Th>
-                        <Th color="white" fontSize={24} fontWeight={700}>
-                          EVENT
-                        </Th>
-                      </Tr>
-                    </Thead>
-                    <Tbody>
-                      <Tr>
-                        <Td p={10} fontSize={24}>
-                          6pm - 6:30pm
-                        </Td>
-                        <Td fontSize={24}>Check ins</Td>
-                      </Tr>
-                      <Tr>
-                        <Td p={10} fontSize={24}>
-                          6pm - 6:30pm
-                        </Td>
-                        <Td fontSize={24}>Welcome Keynote</Td>
-                      </Tr>
-                      <Tr>
-                        <Td p={10} fontSize={24}>
-                          6pm - 6:30pm
-                        </Td>
-                        <Td fontSize={24}>Career Fair Mixer</Td>
-                      </Tr>
-                      <Tr>
-                        <Td p={10} fontSize={24}>
-                          6pm - 6:30pm
-                        </Td>
-                        <Td fontSize={24}>VIP Dinner w Speakers</Td>
-                      </Tr>
-                    </Tbody>
-                  </Table>
-                </TableContainer>
-              </TabPanel>
-              <TabPanel>
-                <TableContainer borderRadius="20px" border="1px solid #FFFFFF">
-                  <Table variant="simple" color="white">
-                    <Thead>
-                      <Tr>
-                        <Th color="white" fontSize={24} fontWeight={700}>
-                          TIME
-                        </Th>
-                        <Th color="white" fontSize={24} fontWeight={700}>
-                          EVENT
-                        </Th>
-                      </Tr>
-                    </Thead>
-                    <Tbody >
-                      <Tr>
-                        <Td p={10} fontSize={24}>
-                          6pm - 6:30pm
-                        </Td>
-                        <Td fontSize={24}>Check ins</Td>
-                      </Tr>
-                      <Tr>
-                        <Td p={10} fontSize={24}>
-                          6pm - 6:30pm
-                        </Td>
-                        <Td fontSize={24}>Welcome Keynote</Td>
-                      </Tr>
-                      <Tr>
-                        <Td p={10} fontSize={24}>
-                          6pm - 6:30pm
-                        </Td>
-                        <Td fontSize={24}>Career Fair Mixer</Td>
-                      </Tr>
-                      <Tr>
-                        <Td p={10} fontSize={24}>
-                          6pm - 6:30pm
-                        </Td>
-                        <Td fontSize={24}>VIP Dinner w Speakers</Td>
-                      </Tr>
-                    </Tbody>
-                  </Table>
-                </TableContainer>
-              </TabPanel>
-              <TabPanel>
-                <TableContainer borderRadius="20px" border="2px solid #FFFFFF">
-                  <Table variant="simple" color="white">
-                    <Thead>
-                      <Tr>
-                        <Th color="white" fontSize={24} fontWeight={700}>
-                          TIME
-                        </Th>
-                        <Th color="white" fontSize={24} fontWeight={700}>
-                          EVENT
-                        </Th>
-                      </Tr>
-                    </Thead>
-                    <Tbody>
-                      <Tr>
-                        <Td p={10} fontSize={24}>
-                          6pm - 6:30pm
-                        </Td>
-                        <Td fontSize={24}>Check ins</Td>
-                      </Tr>
-                      <Tr>
-                        <Td p={10} fontSize={24}>
-                          6pm - 6:30pm
-                        </Td>
-                        <Td fontSize={24}>Welcome Keynote</Td>
-                      </Tr>
-                      <Tr>
-                        <Td p={10} fontSize={24}>
-                          6pm - 6:30pm
-                        </Td>
-                        <Td fontSize={24}>Career Fair Mixer</Td>
-                      </Tr>
-                      <Tr>
-                        <Td p={10} fontSize={24}>
-                          6pm - 6:30pm
-                        </Td>
-                        <Td fontSize={24}>VIP Dinner w Speakers</Td>
-                      </Tr>
-                    </Tbody>
-                  </Table>
-                </TableContainer>
-              </TabPanel>
-            </TabPanels>
-          </Tabs>
-          <Button bg="black" color="white" w="40" mt={10} px={24} py={6} _hover={{ bg: "gray.800"}}>
-            Purchase A Ticket
-          </Button>
+          <TableContainer borderRadius="20px" border="2px solid #FFFFFF">
+            <Table variant="simple" color="white">
+              <Thead>
+                <Tr>
+                  <Th color="white" fontSize={24} fontWeight={600}>
+                    Host
+                  </Th>
+                  <Th color="white" fontSize={24} fontWeight={700}>
+                    GIZMODO
+                  </Th>
+                  <Th color="white" fontSize={24} fontWeight={700}>
+                    GIZMODO
+                  </Th>
+                  <Th color="white" fontSize={24} fontWeight={700}>
+                    GIZMODO
+                  </Th>
+                  <Th color="white" fontSize={24} fontWeight={700}>
+                    GIZMODO
+                  </Th>
+                  <Th color="white" fontSize={24} fontWeight={700}>
+                    GIZMODO
+                  </Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                <Tr>
+                  <Td p={10} fontSize={24} fontWeight={600}>
+                    COST
+                  </Td>
+                  <Td fontSize={24}>$500</Td>
+                  <Td fontSize={24}>$300</Td>
+                  <Td fontSize={24}>$1,725</Td>
+                  <Td fontSize={24}>$575</Td>
+                  <Td fontSize={24}>$250</Td>
+                </Tr>
+                <Tr>
+                  <Td p={10} fontSize={24} fontWeight={600}>
+                    DURATION
+                  </Td>
+                  <Td fontSize={24}>Three Days</Td>
+                  <Td fontSize={24}>Two Days</Td>
+                  <Td fontSize={24}>Ten Days</Td>
+                  <Td fontSize={24}>Five Days</Td>
+                  <Td fontSize={24}>Three Days</Td>
+                </Tr>
+                <Tr>
+                  <Td p={10} fontSize={24} fontWeight={600}>
+                    LOCATION
+                  </Td>
+                  <Td fontSize={24}>Austin</Td>
+                  <Td fontSize={24}>Nash Ville</Td>
+                  <Td fontSize={24}>Austin</Td>
+                  <Td fontSize={24}>Kansas City</Td>
+                  <Td fontSize={24}>NYC</Td>
+                </Tr>
+               
+              </Tbody>
+            </Table>
+          </TableContainer>
         </Flex>
+          <Flex
+            p="64px"
+            bg="#000000"
+            color="white"
+            mt={24}
+            justify="space-between"
+            align="center"
+          >
+            <Flex direction="column">
+              <Text
+                textAlign="start"
+                fontWeight={700}
+                fontSize={60}
+                textTransform="capitalize"
+              >
+                Apply to attend our conference
+              </Text>
+              <Text textAlign="start" fontWeight={500} fontSize={28}>
+                A $250 ticket purchase is required if accepted to confirm your
+                attendance
+              </Text>
+            </Flex>
+            <Flex>
+              <Icon as={PiArrowCircleUpRightThin} fontSize="128" data-blobity />
+            </Flex>
+          </Flex>
       </Flex>
 
       <Footer />

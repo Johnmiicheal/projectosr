@@ -202,8 +202,9 @@ const Home: React.FC = () => {
             p="64px"
             color="white"
             justify="space-between"
-            align="center"
-            gap={60}
+            align={{ lg: "center" }}
+            gap={{ base: 10, lg:60 }}
+            direction={{ base: "column", lg: "row" }}
           >
             <Text
               textAlign="start"
@@ -229,7 +230,7 @@ const Home: React.FC = () => {
           </Flex>
           <VideoSection />
           <Marquee direction="left" speed={20}>
-            <Flex h="30em" mt={20}>
+            <Flex h="30em" mt={{ base: -20, lg: 20 }}>
               {images.map((p) => (
                 <Image src={p} w="100%" h="100%" ml={20} />
               ))}
@@ -281,7 +282,7 @@ const Home: React.FC = () => {
                       src={member.img}
                       alt="members pictures"
                       fit="cover"
-                      h="full"
+                      h={{ base: "140px", lg: "full" }}
                       mb={7}
                       borderRadius="full"
                       border="4px solid #F9FAFB"

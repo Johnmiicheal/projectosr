@@ -9,7 +9,7 @@ const Header = () => {
         {path: "/sponsor", text: "Become a sponsor",}
     ]
     return(
-        <Flex justify={"space-between"} bg="black" w='full' px="64px" py={3} pos="fixed" top={0} borderBottom="1px solid #FFFFFF20">
+        <Flex justify={"space-between"} bg="black" w='full' px="64px" py={3} pos="fixed" zIndex={99} top={0} borderBottom="1px solid #FFFFFF20">
             <Flex align="center">
                 <Text fontSize={32} fontWeight={"black"} color="white">
                     Kinfolq
@@ -22,7 +22,7 @@ const Header = () => {
                     </Link>
                 ))}
                 <Divider orientation="vertical"/>
-                <Button bg="#6D381C" color="white" _hover={{ bg: "#6D381C" }}>
+                <Button bg="#6D381C" color="white" _hover={{ bg: "#6D381C" }} onClick={() => router.push('/tickets')}>
                     Buy tickets
                 </Button>
             </Flex>

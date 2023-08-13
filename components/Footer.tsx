@@ -9,7 +9,7 @@ const Footer = () => {
     ]
     return(
         <Flex bg="white" p="64px" w="full" direction="column">
-            <Flex mt={32} justify="space-between">
+            <Flex mt={32} justify="space-between" direction={{ base: "column", lg: "row"}} gap={{ base: 8, lg: 0 }}>
                 <Flex>
                 <Text
                 textAlign="start"
