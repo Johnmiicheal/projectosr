@@ -466,12 +466,11 @@ const Home: React.FC = () => {
               <Flex
                 mt={10}
                 justify="space-between"
-                h={{ lg: "64vh" }}
                 display={index === area ? "flex" : "none"}
                 align="start"
               >
                 <Image src={item.image} w="70%" borderRadius={"20px"} />
-                <Flex direction="column" h="full" justify="space-between" ml={20}>
+                <Flex direction="column" justify="space-between" ml={20}>
                   <Flex direction="column">
                   <Text fontWeight={600} fontSize={24} mb={10}>
                     {item.name}
@@ -502,7 +501,7 @@ const Home: React.FC = () => {
                   </Flex>
                 </Flex>
                 </Flex>
-                <Flex align="center" gap={5} mt={{ base: 10, lg: 0}}>
+                <Flex align="center" gap={5} mt={10}>
                   <IconButton
                     icon={<PiCaretLeft />}
                     size="sm"
