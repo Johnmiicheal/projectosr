@@ -377,8 +377,8 @@ const Home: React.FC = () => {
                 w={{ base: "30em", md: "50em" }}
               >
                 <Marquee speed={20}>
-                  <Flex h="5em">
-                    {images.toReversed().map((p) => (
+                  <Flex h="5em" direction="row-reverse">
+                    {images.map((p) => (
                       <Image
                         src={p}
                         w="50%"
