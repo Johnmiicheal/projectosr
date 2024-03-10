@@ -1,18 +1,19 @@
-import { Flex, Text, Button, Link, Divider} from "@chakra-ui/react";
+import { Flex, Text, Button, Link, Divider, Icon} from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import { RxArrowTopRight } from "react-icons/rx";
 
 const Header = () => {
     const router = useRouter();
     const links = [
         {path: "/", text: "Home",},
-        {path: "/agenda", text: "Agenda",},
-        {path: "/sponsor", text: "Become a sponsor",}
+        {path: "/about-us", text: "About Us",},
+        {path: "/#", text: "Programs",}
     ]
     return(
-        <Flex justify={"space-between"} bg="black" w='full' px="64px" py={3} pos="fixed" zIndex={99} top={0} borderBottom="1px solid #FFFFFF20">
+        <Flex justify={"space-between"} bg="transparent" w='full' px="64px" py={3} pos="fixed" zIndex={99} top={0} >
             <Flex align="center">
                 <Text fontSize={32} fontWeight={"black"} color="white">
-                    Kinfolq
+                    Project One
                 </Text>
             </Flex>
             <Flex gap={8} align="center">
@@ -22,9 +23,14 @@ const Header = () => {
                     </Link>
                 ))}
                 <Divider orientation="vertical"/>
-                <Button bg="#6D381C" color="white" _hover={{ bg: "#6D381C" }} onClick={() => router.push('/tickets')}>
-                    Buy tickets
-                </Button>
+                <Flex align="center" cursor="pointer">
+                    <Button bg="#FFF" color="black" _hover={{ bg: "#5E181E" }} borderRadius={"full"} >
+                        Work with Us
+                    </Button>
+                    <Flex borderRadius={"full"} bg="white" p={3} ml={-1}>
+                        <Icon as={RxArrowTopRight} />
+                    </Flex>
+                </Flex>
             </Flex>
         </Flex>
     )

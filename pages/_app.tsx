@@ -10,11 +10,11 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-    title: "Kinfolq Conference 2023",
+    title: "Project One Strategies and Resources",
     description:
-      "Black Tech Conference",
+      "Cultivating Excellence",
     generator: "Next.js",
-    applicationName: "Kinfolq",
+    applicationName: "Project One",
     keywords: [
       "freelance",  
       "developer",
@@ -36,17 +36,17 @@ export const metadata: Metadata = {
     ],
     colorScheme: "light",
     openGraph: {
-      title: "Kinfolq Conference 2023",
+      title: "Project One Strategies and Resources",
       description:
-        "Black Tech Conference",
-      url: "https://www.kinfolq.vercel.app/",
+        "Cultivating Excellence",
+      url: "https://www.projectonesr.com/",
       siteName: "www.johnmiicheal.vercel.app",
       images: [
         {
           url: "/website.png",
           width: 1200,
           height: 630,
-          alt: "Kinfolq Conference 2023",
+          alt: "Project One Strategies and Resources",
         },
       ],
       locale: "en-US",
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Kinfolq Conference 2023",
+      title: "Project One Strategies and Resources",
       description:
-        "Black Tech Conference",
+        "Cultivating Excellence",
       creator: "johnmiiiicheal",
       images: [
         "",
@@ -103,7 +103,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ThemeProvider theme={theme}>
         <Head>
           <link rel="shortcut icon" href="/favicon.ico" />
-          <title>Kinfolq Conference 2023</title>
+          <title>Project One Strategy and Resources</title>
         </Head>
           <ChakraProvider theme={theme}>
             {progress && <TopBarProgress />}
