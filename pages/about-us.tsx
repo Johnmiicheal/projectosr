@@ -1,19 +1,7 @@
 import {
   Flex,
   Text,
-  TableContainer,
-  Table,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  Tabs,
-  TabList,
-  TabPanels,
-  Tab,
-  TabPanel,
+  Image,
   Button,
   Box,
 } from "@chakra-ui/react";
@@ -102,7 +90,10 @@ const About = () => {
             landscapes.
           </Text>
         </Flex>
-        
+        <Flex bg="white" px="64px" pb={10} direction="column" align="center">
+        <Image src="/projdata.svg" mb={20} alt="projectosr records" pointerEvents={"none"} />
+          <Image src="/about-info.svg" alt="about us" pointerEvents="none" />
+        </Flex>
       </Flex>
 
       <Footer />
