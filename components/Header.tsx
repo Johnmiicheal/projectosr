@@ -7,7 +7,7 @@ const Header = () => {
     const links = [
         {path: "/", text: "Home",},
         {path: "/about-us", text: "About Us",},
-        {path: "/#", text: "Programs",}
+        {path: "/programs", text: "Programs",}
     ]
     return(
         <Flex justify={"space-between"} bg="transparent" w='full' px="64px" py={3} pos="fixed" zIndex={99} top={0} >

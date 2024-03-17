@@ -7,10 +7,12 @@ import {
   SimpleGrid,
   Icon,
   Box,
-  Image
+  Image,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { RxArrowTopRight } from "react-icons/rx";
+import { IoLocationOutline, IoCallOutline  } from "react-icons/io5";
+
 
 const Footer = () => {
   const links = [
@@ -20,7 +22,16 @@ const Footer = () => {
   ];
   return (
     <Flex bg="white" w="full" direction="column">
-      <Flex direction="column" bgImg="/foot.png" bgRepeat={"no-repeat"} bgSize="cover" bgPos="center" w="full" align="center" p={10}>
+      <Flex
+        direction="column"
+        bgImg="/foot.png"
+        bgRepeat={"no-repeat"}
+        bgSize="cover"
+        bgPos="center"
+        w="full"
+        align="center"
+        p={10}
+      >
         <Text
           color="white"
           p={3}
@@ -64,7 +75,30 @@ const Footer = () => {
         direction={"column"}
         gap={{ base: 8, lg: 0 }}
       >
-        <Image src="/projicon.png" alt="Project One Logo" w="10%" />
+        <Image src="/projicon.png" alt="Project One Logo" w="10%" pointerEvents={"none"} />
+        <Flex direction={{ base: 'column', lg: 'row'}} align={"start"} gap={{ base: 10, lg: 20}}>
+          <Flex direction="column" mb={3}>
+            <Text><Icon as={IoLocationOutline} fontSize={14} /> Our Locations: </Text>
+            <Text fontSize={13} lineHeight={2}>
+              Lagos: Plot 1, Akiogun Road, Oniru, Lekki, Lagos.
+              <br />
+              Abuja: Plot 741, Aminu Kano Crescent, Wuse 2, Abuja. <br />
+              Dubai: P. O. Box 16929, Jebel Ali Free zone, Dubai, U.A.E
+              <br />
+              Accra: 22, Bank Road, Nungua, Accra <br />
+              London: 2, leathwell road, SE8 4JL, London, UK
+              <br />
+            </Text>
+          </Flex>
+          <Flex direction="column">
+          <Text><Icon as={IoCallOutline} fontSize={14} /> Our Telephone Lines: </Text>
+            <Text lineHeight={2} fontSize={13}>
+              +234 816-0067-183
+              <br />
+              +234 816-0061-000
+            </Text>
+          </Flex>
+        </Flex>
         <Text fontSize={14}>
           &copy; {new Date().getFullYear()} Project One Strategy and Resources -
           All rights reserved.

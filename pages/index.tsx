@@ -43,6 +43,12 @@ const Home: React.FC = () => {
   ];
   const [pos, setPos] = useState(0);
   const [area, setArea] = useState(0);
+  const scrollToAnchor = () => {
+    const anchorDiv = document.getElementById("special");
+    if (anchorDiv) {
+      anchorDiv.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <ScrollerMotion>
       <Flex direction="column" bg="#5E181E" minH="100dvh">
@@ -108,6 +114,7 @@ const Home: React.FC = () => {
                 color="white"
                 _hover={{ color: "black", bg: "white" }}
                 borderRadius={"full"}
+                onClick={scrollToAnchor}
               >
                 Learn More
               </Button>
@@ -122,6 +129,7 @@ const Home: React.FC = () => {
           </Flex>
 
           <Flex
+            id="special"
             p="64px"
             bg="#FFF"
             color="#5E181E"
@@ -196,7 +204,7 @@ const Home: React.FC = () => {
                 <Flex
                   mt={8}
                   align="center"
-                  onClick={() => router.push("/tickets")}
+                  onClick={() => router.push("/about-us")}
                   cursor="pointer"
                 >
                   <Button
@@ -246,7 +254,7 @@ const Home: React.FC = () => {
                   <Flex
                     mt={5}
                     align="center"
-                    onClick={() => router.push("/tickets")}
+                    onClick={() => router.push("/about-us")}
                     cursor="pointer"
                   >
                     <Button
@@ -296,7 +304,7 @@ const Home: React.FC = () => {
                   <Flex
                     mt={5}
                     align="center"
-                    onClick={() => router.push("/tickets")}
+                    onClick={() => router.push("/about-us")}
                     cursor="pointer"
                   >
                     <Button
@@ -412,7 +420,7 @@ const Home: React.FC = () => {
                     display={index === pos ? "block" : "none"}
                   >
                     <Text>"{item.review}"</Text>
-                    <Text mt={3}>
+                    <Text mt={3} fontWeight={600}>
                       {" "}
                       - {item.client}, {item.role}
                     </Text>
@@ -479,7 +487,6 @@ const Home: React.FC = () => {
                   <Flex
                   mt={8}
                   align="center"
-                  onClick={() => router.push("/tickets")}
                   cursor="pointer"
                 >
                   <Button
