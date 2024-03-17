@@ -24,8 +24,7 @@ export const faculty = [
     id: 4,
     image: "/faculty/Womi.png",
     name: "Womi Eko",
-    snippet: "IGWE CHIJIOKEM EME is a Content Developer, and a seasoned Speech-accent Coach, Fluency\
- Therapist, and Voice Actor. Although he has done voice prompts and voiceover for clients like Airtel via Voice Therapy Academy, The Future Africa Awards, 2014, Zero Degree's Fidelity Bank Savings Promo Radio Advert, and The Nigeria Police Force, he also has facilitated and co-facilitated training workshops in speech and reading fluency, diction for poetic delivery, communication and public speaking for clients like Falk Prime Atlantic via Diamond School of Protocol and Etiquette, CrewXtreme, and a wide range of private primary schools in Lagos."
+    snippet: "Womi Eko is a seasoned HR professional, with a wealth of expertise in business consulting, strategic partnering, and problem-solving. With a proven track record of helping organizations achieve their strategic goals and overcome complex challenges, Womi is dedicated to driving organizational success through effective HR strategies and initiatives. Her area of expertise includes Strategic HR planning, Talent Acquisition and Management, Employee Engagement, and HR Policy Development and Implementation."
   },
   {
     id: 5,
@@ -38,19 +37,20 @@ export const faculty = [
     image: "/faculty/Chiadi.png",
     name: "Dr. Chiadi Ndu",
     snippet: "Chiadi Ndu was called to the Nigerian Bar in 1987 but  passion for  mental health overtook the study of law and she went back to the University of Lagos to study psychology. She has since obtained a Doctorate degree in Psychology. She has concluded various countinuing  professional developmental training programs with the Institute of Counselling Glasgow,  Beck Institute of Cognitive Behaviour Therapy amongst others.\
-    She founded BTH Integrated Wellness and Therapy in 2012 and has completed over 8, 000hours  of professional counselling and psychotherapy . During this period, She led and trained a 12-person team of counsellors in  a global faith-based nonprofit with branches in over 100 countries."
+    She founded BTH Integrated Wellness and Therapy in 2012 and has completed over 8,000 hours  of professional counselling and psychotherapy. During this period, She led and trained a 12-person team of counsellors in  a global faith-based nonprofit with branches in over 100 countries."
   },
   {
     id: 7,
     image: "/faculty/Kola.png",
     name: "Kola Olutimehin",
-    snippet: "Haastrup is the lead trainer/coach of StevenHaastrup Consulting Limited where he leads and manages the Strategy and Quality of deliverables for the Organization. He has over 7 years of robust experience in individually and corporately coaching top management staff of medium and large organizations. (Some of which are National Pension Commission, Raw Material Development and Research Council, Zenith Bank, Haggai Institute USA, Covenant University, NAPIMS - NNPC, Shell Petroleum, ECOWAS, Hewlett-Parker Nigeria, NDDC, FUNAAB, Full Gospel Business Men’s Fellowship, First Bank Nigeria, The National Assembly etc.)"
+    snippet: "Kola Olutimehin is a Dream-Driver and an internationally acclaimed inspirational speaker who travels around the world inspiring people and corporations to channel their energies and focus towards their endeavour. An accountancy graduate from the University of Lagos, Nigeria and a fellow of the Association of Chartered Certified Accountants (ACCA) in the UK, Kola has consulted and contributed significantly to productivity and business process re-engineering with blue chip companies and entrepreneurs in two continents."
   },
   {
     id: 8,
     image: "/faculty/Austin.png",
     name: "Dr. Austin Anyaogu",
-    snippet: "Austin is a professional business advisor with significant experience in diverse sectors of the economy. His experience spans audit, accounting & finance, project management, business development and consulting and he has over 20 years of working experience cutting across different sectors. "
+    snippet: "Dr. Austin is a professional business advisor with significant experience in diverse sectors of the economy. His experience spans audit, accounting & finance, project management, business development and consulting and he has over 20 years of working experience cutting across different sectors. \
+    He is an alumnus of Obafemi Awolowo University where he studied Accounting (1989) with an MBA in Banking and Finance from University of Nigeria in 1998. He is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN), Fellow of The Institute of Chartered Economist of Nigeria (FCE) and Associate Member (AMNIM) Nigerian Institute of Management"
   },
 
 ];
