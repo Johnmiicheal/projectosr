@@ -7,11 +7,13 @@ import {
   Collapse,
   ListItem,
   UnorderedList,
+  Icon,
 } from "@chakra-ui/react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { programs } from "@/program";
 import React from "react";
+import { RxArrowTopRight } from "react-icons/rx";
 
 const Programs = () => {
   const [show, setShow] = React.useState(false);
@@ -71,7 +73,7 @@ const Programs = () => {
             lineHeight="shorter"
             w="5em"
           >
-            Programs our Company
+            What we offer
           </Text>
 
           <Text
@@ -81,11 +83,7 @@ const Programs = () => {
             color="#5E181E"
             w={{ lg: "790px" }}
           >
-            We're a dedicated team of employee engagement and experiential
-            learning specialists fueled by a shared mission: to empower
-            organizations to boost profitability, expand market reach, enhance
-            brand reputation, optimize costs, and thrive in competitive
-            landscapes.
+            Our experiential learning arm is a Strategic Learning Partner that assists in developing talent and significantly elevating levels of human performance, turning your people into the best hands & minds in your industry.
           </Text>
         </Flex>
         <Flex bg="white" px="64px" pb={10} direction="column" align="center">
@@ -95,6 +93,108 @@ const Programs = () => {
             alt="projectosr records"
             pointerEvents={"none"}
           />
+          <Flex w="full" gap={2} align="center" my={10}>
+              <Flex
+                bg="white"
+                border="1px solid #E2E2E2"
+                justify={"space-between"}
+                borderRadius={"md"}
+                p={3}
+              >
+                <Flex direction="column">
+                  <Text fontWeight={600} fontSize={20} color="black">
+                    Employee Engagement Consulting
+                  </Text>
+                  <Text
+                    color="black"
+                    w={{ base: "20em", lg: "30em"}}
+                    fontSize={13}
+                    fontWeight={400}
+                    mt={3}
+                  >
+                    Our Employee Engagement Consulting services leverage
+                    insights into employee motivation to enhance performance. We
+                    analyze data to pinpoint areas for improvement and craft
+                    tailored strategies to drive workforce engagement.
+                  </Text>
+                  <Flex
+                    mt={5}
+                    align="center"
+                    cursor="pointer"
+                  >
+                    <Button
+                      bg="#5E181E"
+                      color="white"
+                      _hover={{ bg: "#4A1015" }}
+                      borderRadius={"full"}
+                    >
+                      Learn more
+                    </Button>
+                    <Flex
+                      borderRadius={"full"}
+                      bg="#5E181E"
+                      color="white"
+                      p={3}
+                      ml={-1}
+                    >
+                      <Icon as={RxArrowTopRight} />
+                    </Flex>
+                  </Flex>
+                </Flex>
+                <Image src="/emp.png" w="32%" alt="Employee Counsulting" />
+              </Flex>
+
+              <Flex
+                bg="white"
+                justify={"space-between"}
+                borderRadius={"md"}
+                p={3}
+                border="1px solid #E2E2E2"
+
+              >
+                <Flex direction="column">
+                  <Text fontWeight={600} fontSize={20} color="black">
+                    Experiential Learning
+                  </Text>
+                  <Text
+                    color="black"
+                    w={{ base: "20em", lg: "30em"}}
+                    fontSize={13}
+                    fontWeight={400}
+                    mt={3}
+                  >
+                    Progressive organizations are no longer interested in the
+                    usual, mundane, traditional approach to trainings that puts
+                    employees in a mold and has no impact whatsoever on human
+                    behavior.
+                  </Text>
+                  <Flex
+                    mt={5}
+                    align="center"
+                    cursor="pointer"
+                  >
+                    <Button
+                      bg="#5E181E"
+                      color="white"
+                      _hover={{ bg: "#4A1015" }}
+                      borderRadius={"full"}
+                    >
+                      Learn more
+                    </Button>
+                    <Flex
+                      borderRadius={"full"}
+                      bg="#5E181E"
+                      color="white"
+                      p={3}
+                      ml={-1}
+                    >
+                      <Icon as={RxArrowTopRight} />
+                    </Flex>
+                  </Flex>
+                </Flex>
+                <Image src="/exp.png" w="32%" alt="Experiential Learning" />
+              </Flex>
+            </Flex>
           <Flex w="full" direction="column" gap="8">
             {programs.map((item, index) => (
               <Flex
