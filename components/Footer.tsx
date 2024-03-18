@@ -45,10 +45,10 @@ const Footer = () => {
         </Text>
         <Text
           color="white"
-          fontSize={32}
+          fontSize={{ base: 24, lg: 32}}
           fontWeight={600}
           mt={10}
-          px={48}
+          px={{ lg: 48}}
           textAlign={"center"}
         >
           Ready to take your organization to the next level? Contact us today to

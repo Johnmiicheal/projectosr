@@ -28,7 +28,7 @@ const Programs = () => {
           bgSize="cover"
           bgRepeat="no-repeat"
           h="50dvh"
-          px="64px"
+          px={{ base: '20px', lg: "64px"}}
           position="relative"
           zIndex={1}
         >
@@ -44,7 +44,7 @@ const Programs = () => {
           <Text
             textAlign="start"
             fontWeight={700}
-            fontSize={{ base: 72, lg: 92 }}
+            fontSize={{ base: 60, lg: 92 }}
             textTransform="capitalize"
             letterSpacing="tighter"
             color="white"
@@ -57,7 +57,7 @@ const Programs = () => {
         </Box>
 
         <Flex
-          p="64px"
+          p={{ base: "20px", lg: "64px" }}
           color="#5E181E"
           bg="white"
           justify="space-between"
@@ -71,7 +71,7 @@ const Programs = () => {
             fontSize={36}
             textTransform="capitalize"
             lineHeight="shorter"
-            w="5em"
+            w={{ lg: "5em"}}
           >
             What we offer
           </Text>
@@ -86,20 +86,21 @@ const Programs = () => {
             Our experiential learning arm is a Strategic Learning Partner that assists in developing talent and significantly elevating levels of human performance, turning your people into the best hands & minds in your industry.
           </Text>
         </Flex>
-        <Flex bg="white" px="64px" pb={10} direction="column" align="center">
+        <Flex bg="white" px={{ base: "20px", lg: "64px" }} pb={10} direction="column" align="center">
           <Image
             src="/projdata.svg"
             mb={20}
             alt="projectosr records"
             pointerEvents={"none"}
           />
-          <Flex w="full" gap={2} align="center" my={10}>
+          <Flex w="full" direction={{ base: 'column', lg: 'row' }} gap={2} align="center" my={10}>
               <Flex
                 bg="white"
                 border="1px solid #E2E2E2"
                 justify={"space-between"}
                 borderRadius={"md"}
                 p={3}
+                w="full"
               >
                 <Flex direction="column">
                   <Text fontWeight={600} fontSize={20} color="black">
@@ -141,7 +142,7 @@ const Programs = () => {
                     </Flex>
                   </Flex>
                 </Flex>
-                <Image src="/emp.png" w="32%" alt="Employee Counsulting" />
+                <Image src="/emp.png" w="32%" alt="Employee Counsulting" display={{ base: 'none', xl: 'block'}} />
               </Flex>
 
               <Flex
@@ -150,6 +151,7 @@ const Programs = () => {
                 borderRadius={"md"}
                 p={3}
                 border="1px solid #E2E2E2"
+                w="full"
 
               >
                 <Flex direction="column">
@@ -192,7 +194,7 @@ const Programs = () => {
                     </Flex>
                   </Flex>
                 </Flex>
-                <Image src="/exp.png" w="32%" alt="Experiential Learning" />
+                <Image src="/exp.png" w="32%" alt="Experiential Learning"  display={{ base: 'none', xl: 'block'}}  />
               </Flex>
             </Flex>
           <Flex w="full" direction="column" gap="8">

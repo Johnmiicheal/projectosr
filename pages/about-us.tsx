@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   Flex,
   Text,
@@ -6,31 +6,27 @@ import {
   Button,
   Box,
   IconButton,
-  Icon
+  Icon,
 } from "@chakra-ui/react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { board } from "@/board";
-import {
-  PiCaretLeft,
-  PiCaretRight,
-} from "react-icons/pi";
+import { PiCaretLeft, PiCaretRight } from "react-icons/pi";
 import { RxArrowTopRight } from "react-icons/rx";
-
 
 const About = () => {
   const [pos, setPos] = useState(0);
   const [area, setArea] = useState(0);
   return (
-    <Flex direction="column" bg="#5E181E" minH="100dvh">
-      <Header />
+    <Flex direction="column" bg="#5E181E" minH="100dvh" w="full">
+       <Header />
       <Flex direction="column">
         <Box
           bgImg="/about.png"
           bgSize="cover"
           bgRepeat="no-repeat"
           h="50dvh"
-          px="64px"
+          px={{ base: "20px", lg: "64px" }}
           position="relative"
           zIndex={1}
         >
@@ -46,7 +42,7 @@ const About = () => {
           <Text
             textAlign="start"
             fontWeight={700}
-            fontSize={{ base: 72, lg: 92 }}
+            fontSize={{ base: 60, lg: 92 }}
             textTransform="capitalize"
             letterSpacing="tighter"
             color="white"
@@ -59,7 +55,7 @@ const About = () => {
         </Box>
 
         <Flex
-          p="64px"
+          p={{ base: "20px", lg: "64px" }}
           color="#5E181E"
           bg="white"
           justify="space-between"
@@ -83,7 +79,7 @@ const About = () => {
             fontWeight={500}
             fontSize={20}
             color="#5E181E"
-            w={{ lg: "790px" }}
+            w={{ base: "full", lg: "790px" }}
           >
             We're a dedicated team of employee engagement and experiential
             learning specialists fueled by a shared mission: to empower
@@ -92,67 +88,89 @@ const About = () => {
             landscapes.
           </Text>
         </Flex>
-        <Flex bg="white" px="64px" pb={10} direction="column" align="center">
-        <Image src="/projdata.svg" mb={20} alt="projectosr records" pointerEvents={"none"} />
-          <Image src="/about-info.svg" alt="about us" pointerEvents="none" />
+        <Flex bg="white" px={{ base: '20px', lg:"64px"}} pb={10} direction="column" align="center">
+          <Image
+            src="/projdata.svg"
+            mb={20}
+            alt="projectosr records"
+            pointerEvents={"none"}
+          />
+          <Image
+            src={"/about-info.svg"}
+            alt="about us"
+            pointerEvents="none"
+            w="full"
+            display={{ base: 'none', md: 'block'}}
+          />
+          <Image
+            src={"/mobile.svg"}
+            alt="about us"
+            pointerEvents="none"
+            w="full"
+            display={{ base: 'block', md: 'none'}}
+
+          />
         </Flex>
-        <Flex p="64px" h="full" color="white" align={"center"} direction={"column"}>
-            <Text
-              color="white"
-              p={3}
-              bg="#A83E47"
-              w="40"
-              textAlign={"center"}
-              borderRadius={"full"}
-              border="1px solid white"
+        <Flex
+          p={{ base: "20px", lg: "64px" }}
+          h="full"
+          color="white"
+          align={"center"}
+          direction={"column"}
+        >
+          <Text
+            color="white"
+            p={3}
+            bg="#A83E47"
+            w="40"
+            textAlign={"center"}
+            borderRadius={"full"}
+            border="1px solid white"
+          >
+            Our Board
+          </Text>
+          <Text
+            textAlign="center"
+            fontWeight={700}
+            fontSize={{ base: 40, lg: 60}}
+            textTransform="capitalize"
+          >
+            Meet our Board Members
+          </Text>
+          {board.map((item, index) => (
+            <Flex
+              mt={10}
+              justify="space-between"
+              display={index === area ? "flex" : "none"}
+              align="start"
+              direction={{ base: 'column', lg: 'row' }}
             >
-              Our Board
-            </Text>
-            <Text
-              textAlign="center"
-              fontWeight={700}
-              fontSize={60}
-              textTransform="capitalize"
-            >
-              Meet our Board Members
-            </Text>
-            {board.map((item, index) => (
-              <Flex
-                mt={10}
-                justify="space-between"
-                display={index === area ? "flex" : "none"}
-                align="start"
-              >
-                <Image src={item.image} w="70%" borderRadius={"20px"} />
-                <Flex direction="column" justify="space-between" ml={20}>
-                  <Flex direction="column">
+              <Image src={item.image} w="70%" borderRadius={"20px"} />
+              <Flex direction="column" justify="space-between" ml={{ lg: 20}}>
+                <Flex direction="column">
                   <Text fontWeight={600} fontSize={24} mb={10}>
                     {item.name}
                   </Text>
                   <Text>{item.snippet}</Text>
-                  <Flex
-                  mt={8}
-                  align="center"
-                  cursor="pointer"
-                >
-                  <Button
-                    bg="#FFF"
-                    color="black"
-                    _hover={{ bg: "gray.100" }}
-                    borderRadius={"full"}
-                  >
-                    Read more
-                  </Button>
-                  <Flex
-                    borderRadius={"full"}
-                    bg="white"
-                    color="black"
-                    p={3}
-                    ml={-1}
-                  >
-                    <Icon as={RxArrowTopRight} />
+                  <Flex mt={8} align="center" cursor="pointer">
+                    <Button
+                      bg="#FFF"
+                      color="black"
+                      _hover={{ bg: "gray.100" }}
+                      borderRadius={"full"}
+                    >
+                      Read more
+                    </Button>
+                    <Flex
+                      borderRadius={"full"}
+                      bg="white"
+                      color="black"
+                      p={3}
+                      ml={-1}
+                    >
+                      <Icon as={RxArrowTopRight} />
+                    </Flex>
                   </Flex>
-                </Flex>
                 </Flex>
                 <Flex align="center" gap={5} mt={10}>
                   <IconButton
@@ -176,11 +194,12 @@ const About = () => {
                     color="white"
                   />
                 </Flex>
-                </Flex>
               </Flex>
-            ))}
-          </Flex>
+            </Flex>
+          ))}
+        </Flex>
       </Flex>
+     
 
       <Footer />
     </Flex>
