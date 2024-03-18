@@ -74,7 +74,7 @@ const Header = () => {
         </Flex>
       </Flex>
 
-      <Flex align="center" gap={3}>
+      <Flex align="center" gap={3} display={{ base: "flex", lg: "none" }}>
         <Menu>
           <MenuButton
             as={IconButton}
