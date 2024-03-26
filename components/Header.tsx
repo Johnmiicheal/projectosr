@@ -43,7 +43,7 @@ const Header = () => {
           fontWeight={"black"}
           color="white"
         >
-          Project One
+          ProjectOne
         </Text>
       </Flex>
       <Flex gap={8} align="center" display={{ base: "none", lg: "flex" }}>
@@ -59,7 +59,7 @@ const Header = () => {
           </Link>
         ))}
         <Divider orientation="vertical" />
-        <Flex align="center" cursor="pointer">
+        <Flex align="center" cursor="pointer" onClick={() => window.open('mailto:info@projectonesr.com?subject=ProjectOne: Could we have a meeting?')}>
           <Button
             bg="#FFF"
             color="black"

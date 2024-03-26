@@ -54,14 +54,14 @@ const Footer = () => {
           Ready to take your organization to the next level? Contact us today to
           learn more about how ProjectOne can help you achieve your goals.
         </Text>
-        <Flex mt={8} align="center" cursor="pointer">
+        <Flex mt={8} align="center" cursor="pointer" onClick={() => window.open('https://wa.me/08160067183')}>
           <Button
             bg="#FFF"
             color="black"
             _hover={{ bg: "gray.100" }}
             borderRadius={"full"}
           >
-            Give us a call
+            Chat with us
           </Button>
           <Flex borderRadius={"full"} bg="white" color="black" p={3} ml={-1}>
             <Icon as={RxArrowTopRight} />
@@ -78,7 +78,7 @@ const Footer = () => {
         <Image src="/projicon.png" alt="Project One Logo" w="10%" pointerEvents={"none"} />
         <Flex direction={{ base: 'column', lg: 'row'}} align={"start"} gap={{ base: 10, lg: 20}}>
           <Flex direction="column" mb={3}>
-            <Text><Icon as={IoLocationOutline} fontSize={14} /> Our Locations: </Text>
+            <Text><Icon as={IoLocationOutline} fontSize={14} /> Our Global Locations: </Text>
             <Text fontSize={13} lineHeight={2}>
               Lagos: Plot 1, Akiogun Road, Oniru, Lekki, Lagos.
               <br />
@@ -99,6 +99,9 @@ const Footer = () => {
             </Text>
           </Flex>
         </Flex>
+        <Text fontSize={14} mb={5}>
+         You can reach us via email: <strong>info@projectonesr.com</strong>
+        </Text>
         <Text fontSize={14}>
           &copy; {new Date().getFullYear()} Project One Strategy and Resources -
           All rights reserved.

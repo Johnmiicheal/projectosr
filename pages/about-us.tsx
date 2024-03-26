@@ -135,7 +135,7 @@ const About = () => {
             fontSize={{ base: 40, lg: 60}}
             textTransform="capitalize"
           >
-            Meet our Board Members
+            Meet our Advisory Board Members
           </Text>
           {board.map((item, index) => (
             <Flex
@@ -152,25 +152,6 @@ const About = () => {
                     {item.name}
                   </Text>
                   <Text>{item.snippet}</Text>
-                  <Flex mt={8} align="center" cursor="pointer">
-                    <Button
-                      bg="#FFF"
-                      color="black"
-                      _hover={{ bg: "gray.100" }}
-                      borderRadius={"full"}
-                    >
-                      Read more
-                    </Button>
-                    <Flex
-                      borderRadius={"full"}
-                      bg="white"
-                      color="black"
-                      p={3}
-                      ml={-1}
-                    >
-                      <Icon as={RxArrowTopRight} />
-                    </Flex>
-                  </Flex>
                 </Flex>
                 <Flex align="center" gap={5} mt={10}>
                   <IconButton

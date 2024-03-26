@@ -50,7 +50,6 @@ const Home: React.FC = () => {
     }
   };
   return (
-    <ScrollerMotion>
       <Flex direction="column" bg="#5E181E" minH="100dvh">
         <Header />
         <motion.div
@@ -107,8 +106,8 @@ const Home: React.FC = () => {
               team of employee engagement experts and experiential learning
               consultants.
             </Text>
-            <Flex gap={6} align="center" mt={6}>
-              <Button borderRadius={"full"}>Work with Us</Button>
+            <Flex gap={4} align="center" mt={6}>
+              <Button borderRadius={"full"} onClick={() => window.open('mailto:info@projectonesr.com?subject=ProjectOne: Could we have a meeting?')}>Work with Us</Button>
               <Button
                 variant={"outline"}
                 color="white"
@@ -492,29 +491,6 @@ const Home: React.FC = () => {
                     {item.name}
                   </Text>
                   <Text>{item.snippet}</Text>
-                  <Flex
-                  mt={8}
-                  align="center"
-                  cursor="pointer"
-                >
-                  <Button
-                    bg="#FFF"
-                    color="black"
-                    _hover={{ bg: "gray.100" }}
-                    borderRadius={"full"}
-                  >
-                    Read more
-                  </Button>
-                  <Flex
-                    borderRadius={"full"}
-                    bg="white"
-                    color="black"
-                    p={3}
-                    ml={-1}
-                  >
-                    <Icon as={RxArrowTopRight} />
-                  </Flex>
-                </Flex>
                 </Flex>
                 <Flex align="center" gap={5} mt={10}>
                   <IconButton
@@ -545,7 +521,6 @@ const Home: React.FC = () => {
           <Footer />
         </motion.div>
       </Flex>
-    </ScrollerMotion>
   );
 };
 

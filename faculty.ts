@@ -1,7 +1,7 @@
 export const faculty = [
   {
     id: 1,
-    image: "/faculty/Myles.png",
+    image: "/faculty/RealMyles.png",
     name: "Myles Makafui",
     snippet:
       "Myles Makafui is a management consultant, employee engagement expert and sought-after conference speaker that addresses thousands of people every year, teaching practical, proven techniques and strategies that have transformed many lives and businesses, inspiring success everywhere. \
