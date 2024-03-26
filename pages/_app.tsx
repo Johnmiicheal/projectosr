@@ -40,10 +40,10 @@ export const metadata: Metadata = {
       description:
         "Cultivating Excellence",
       url: "https://www.projectonesr.com/",
-      siteName: "www.johnmiicheal.vercel.app",
+      siteName: "www.projectonesr.com",
       images: [
         {
-          url: "/website.png",
+          url: "/red.png",
           width: 1200,
           height: 630,
           alt: "Project One Strategies and Resources",
@@ -102,7 +102,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
       <ThemeProvider theme={theme}>
         <Head>
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="shortcut icon" href="/projicon.png" />
           <title>Project One Strategy and Resources</title>
         </Head>
           <ChakraProvider theme={theme}>
