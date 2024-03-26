@@ -14,6 +14,8 @@ import {
   MenuOptionGroup,
   MenuDivider,
   IconButton,
+  Image,
+  Box,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { IoMenu } from "react-icons/io5";
@@ -29,19 +31,31 @@ const Header = () => {
   return (
     <Flex
       justify={"space-between"}
-      bg="transparent"
+      bg="#5e181e20"
+      css={{
+        "-webkit-backdrop-filter": "blur(5px)",
+        "backdrop-filter": "blur(5px)",
+      }}
       w="full"
-      px={{ base: "20px", lg: "64px" }}
+      px={{ base: "10px", lg: "64px" }}
       py={3}
       pos="fixed"
       zIndex={99}
       top={0}
     >
       <Flex align="center">
+        <Flex borderRadius={"full"} w={{ base: '45px', lg: "60px"}} h={{ base: '45px', lg: "60px"}} bg="white" p={2} align="center" overflow={"hidden"}>
+        <Image src="/projicon.png" alt="Project One Logo" />
+        </Flex>
         <Text
-          fontSize={{ base: 20, md: 32 }}
-          fontWeight={"black"}
-          color="white"
+        ml={-2}
+          fontSize={{ base: 14, md: 24 }}
+          fontWeight={"700"}
+          bg="white"
+          py={3}
+          px={4}
+          borderRadius={"full"}
+          color="#5E181E"
         >
           ProjectOne
         </Text>

@@ -170,7 +170,7 @@ const Home: React.FC = () => {
           <Flex
             p={{ base: "20px", lg: "64px" }}
             direction="column"
-            bgImg="grid.png"
+            bgImg="red.png"
             color="white"
             align="start"
           >
