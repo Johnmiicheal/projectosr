@@ -90,7 +90,7 @@ const About = () => {
         </Flex>
         <Flex bg="white" px={{ base: '20px', lg:"64px"}} pb={10} direction="column" align="center">
           <Image
-            src="/projdata.svg"
+            src="/data.svg"
             mb={20}
             alt="projectosr records"
             pointerEvents={"none"}

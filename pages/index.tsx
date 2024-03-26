@@ -107,7 +107,7 @@ const Home: React.FC = () => {
               consultants.
             </Text>
             <Flex gap={4} align="center" mt={6}>
-              <Button borderRadius={"full"} onClick={() => window.open('mailto:info@projectonesr.com?subject=ProjectOne: Could we have a meeting?')}>Work with Us</Button>
+              <Button borderRadius={"full"} onClick={() => window.open('https://wa.me/08160067183')}>Work with Us</Button>
               <Button
                 variant={"outline"}
                 color="white"

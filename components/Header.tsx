@@ -73,7 +73,7 @@ const Header = () => {
           </Link>
         ))}
         <Divider orientation="vertical" />
-        <Flex align="center" cursor="pointer" onClick={() => window.open('mailto:info@projectonesr.com?subject=ProjectOne: Could we have a meeting?')}>
+        <Flex align="center" cursor="pointer" onClick={() => window.open('https://wa.me/08160067183')}>
           <Button
             bg="#FFF"
             color="black"
